@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestNG Automation Suite" parallel = "tests" thread-count="2">
+		<listeners>
+				<listener class-name = "com.RetryLogic.MyTransform"/>
+				
+		</listeners>
+
+  <test name="ParallelTestCases">
+
+<classes>
+       <class name="com.test.TestNGFeatures"/>
+       <methods>
+       <exclude name="searchPage"></exclude>  
+       </methods>
+     
+    </classes>
+     
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+
+
+	
+
+
+		

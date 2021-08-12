@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestNG Automation Suite]">
+  <listeners>
+    <listener class-name="com.RetryLogic.MyTransform"/>
+  </listeners>
+  <test thread-count="5" name="ParallelTestCases(failed)" parallel="classes">
+    <classes>
+      <class name="com.Parallel.ChromeTest">
+        <methods>
+          <include name="afterTest"/>
+          <include name="ChromeTestMethod"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- com.Parallel.ChromeTest -->
+      <class name="com.Parallel.FireFoxTest">
+        <methods>
+          <include name="FirefoxTestMethod"/>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.Parallel.FireFoxTest -->
+    </classes>
+  </test> <!-- ParallelTestCases(failed) -->
+</suite> <!-- Failed suite [TestNG Automation Suite] -->
